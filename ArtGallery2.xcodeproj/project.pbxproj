@@ -12,6 +12,8 @@
 		1B19D00B2271D665008E05E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B19D0092271D665008E05E4 /* Main.storyboard */; };
 		1B19D00D2271D666008E05E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B19D00C2271D666008E05E4 /* Assets.xcassets */; };
 		1B19D0102271D666008E05E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B19D00E2271D666008E05E4 /* LaunchScreen.storyboard */; };
+		1B19D0182271D713008E05E4 /* PaintingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D0172271D713008E05E4 /* PaintingViewController.swift */; };
+		1B19D01A2271D722008E05E4 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D0192271D722008E05E4 /* PaintingTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		1B19D00C2271D666008E05E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B19D00F2271D666008E05E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B19D0112271D666008E05E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B19D0172271D713008E05E4 /* PaintingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingViewController.swift; sourceTree = "<group>"; };
+		1B19D0192271D722008E05E4 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				1B19D0052271D665008E05E4 /* AppDelegate.swift */,
 				1B19D0072271D665008E05E4 /* ViewController.swift */,
 				1B19D0092271D665008E05E4 /* Main.storyboard */,
+				1B19D0172271D713008E05E4 /* PaintingViewController.swift */,
+				1B19D0192271D722008E05E4 /* PaintingTableViewCell.swift */,
 				1B19D00C2271D666008E05E4 /* Assets.xcassets */,
 				1B19D00E2271D666008E05E4 /* LaunchScreen.storyboard */,
 				1B19D0112271D666008E05E4 /* Info.plist */,
@@ -137,6 +143,8 @@
 			files = (
 				1B19D0082271D665008E05E4 /* ViewController.swift in Sources */,
 				1B19D0062271D665008E05E4 /* AppDelegate.swift in Sources */,
+				1B19D0182271D713008E05E4 /* PaintingViewController.swift in Sources */,
+				1B19D01A2271D722008E05E4 /* PaintingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
