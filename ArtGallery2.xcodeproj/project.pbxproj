@@ -64,9 +64,9 @@
 			children = (
 				1B19D01B2271D85C008E05E4 /* Painting.swift */,
 				1B19D01D2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift */,
-				1B19D0212271D9A6008E05E4 /* PaintingModel.swift */,
 				1B19D0052271D665008E05E4 /* AppDelegate.swift */,
 				1B19D0092271D665008E05E4 /* Main.storyboard */,
+				1B19D0212271D9A6008E05E4 /* PaintingModel.swift */,
 				1B19D0172271D713008E05E4 /* PaintingViewController.swift */,
 				1B19D0192271D722008E05E4 /* PaintingTableViewCell.swift */,
 				1B19D00C2271D666008E05E4 /* Assets.xcassets */,
