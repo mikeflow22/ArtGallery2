@@ -22,13 +22,44 @@
                                 <rect key="frame" x="20" y="140" width="374" height="722"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="3NF-VE-BSq" customClass="PaintingTableViewCell" customModule="ArtGallery2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="256" id="3NF-VE-BSq" customClass="PaintingTableViewCell" customModule="ArtGallery2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="256"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3NF-VE-BSq" id="7g4-YS-tZz">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="255.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G22-zY-h4i">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="255.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6iR-Uc-CXE">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="206.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="256" id="ajU-Lx-YOg"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtr-90-RsG">
+                                                            <rect key="frame" x="0.0" y="226.5" width="334" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="toggledAppreciation:" destination="3NF-VE-BSq" eventType="touchUpInside" id="6bX-tt-MgI"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="G22-zY-h4i" secondAttribute="trailing" constant="20" id="9fR-tq-HZG"/>
+                                                <constraint firstItem="G22-zY-h4i" firstAttribute="leading" secondItem="7g4-YS-tZz" secondAttribute="leading" constant="20" id="Ind-39-WKo"/>
+                                                <constraint firstItem="G22-zY-h4i" firstAttribute="top" secondItem="7g4-YS-tZz" secondAttribute="top" id="T8K-V8-aRB"/>
+                                                <constraint firstAttribute="bottom" secondItem="G22-zY-h4i" secondAttribute="bottom" id="tE8-vX-EL6"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButtonProperties" destination="Mtr-90-RsG" id="cGV-Pg-TtF"/>
+                                            <outlet property="portraitView" destination="6iR-Uc-CXE" id="Spe-ma-0DS"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

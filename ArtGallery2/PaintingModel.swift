@@ -30,22 +30,33 @@ class PaintingModel: NSObject {
 }
 
 extension PaintingModel: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        tableView.delegate = self
-        return 1
-    }
-    
+ 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let painting = paintings[indexPath.row]
-        cell.imageView?.image = painting.image
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
+        
+        //pass the painting at indexpath.row to the tableViewCell's painting property.
+        let paintingToPass = paintings[indexPath.row]
+        cell.painting = paintingToPass
+        
+        //because we have access, in this function, to grab the tableViewCell's property "delegate" we can grab that and set this class to be the delegate
+        cell.delegate = self
         
         return cell
     }
+}
+
+extension PaintingModel: PaintngTableViewCellDelegate {
+    
+    func toggleAppreciation(for painting: Painting){
+        painting.isLiked = !painting.isLiked
+    }
+    func tappedLikeButton(on cell: PaintingTableViewCell) {
+        <#code#>
+    }
+    
     
 }
