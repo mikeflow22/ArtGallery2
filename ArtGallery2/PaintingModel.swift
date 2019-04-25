@@ -30,6 +30,13 @@ class PaintingModel: NSObject {
 }
 
 extension PaintingModel: UITableViewDelegate, UITableViewDataSource {
+    
+    ////In numberOfSections, set your weak tableView Property ------- DO WE EVEN NEED TO SET THE TABLEVIEW PROPERTY HERE?
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        tableView.delegate = self
+//
+//        return 1
+//    }
  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return paintings.count
@@ -38,9 +45,14 @@ extension PaintingModel: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PaintingTableViewCell else { return UITableViewCell() }
         
-        //pass the painting at indexpath.row to the tableViewCell's painting property.
-        let paintingToPass = paintings[indexPath.row]
-        cell.painting = paintingToPass
+        //We can set the tableViewCell's properties here, we don't need to do a segue and pass the model, we can, but this is a different way.
+        let painting = paintings[indexPath.row]
+        cell.portraitView.image = painting.image
+        
+        //use a ternary operator to set the button property title. if its true set it to unlike.
+        let likeButtonTitle = painting.isLiked ? "Unlike" : "like"
+        cell.likeButtonProperties.setTitle(likeButtonTitle, for: .normal)
+        
         
         //because we have access, in this function, to grab the tableViewCell's property "delegate" we can grab that and set this class to be the delegate
         cell.delegate = self
@@ -51,12 +63,20 @@ extension PaintingModel: UITableViewDelegate, UITableViewDataSource {
 
 extension PaintingModel: PaintngTableViewCellDelegate {
     
-    func toggleAppreciation(for painting: Painting){
+    func toggleIsLiked(for painting: Painting){
         painting.isLiked = !painting.isLiked
     }
     func tappedLikeButton(on cell: PaintingTableViewCell) {
-        <#code#>
+        print("delegate was triggered")
+        
+        //have to get the painting at said cell. We have to access its index path
+        guard let index = tableView?.indexPath(for: cell) else { return }
+        let paintingToChange = paintings[index.row]
+        print("pantng indexpath: \(index.row)")
+        print("painting isLiked before toggle: \(paintingToChange.isLiked)")
+        
+        toggleIsLiked(for: paintingToChange)
+        print("painting isLked AFTER toggle: \(paintingToChange.isLiked)")
+        tableView?.reloadData()
     }
-    
-    
 }

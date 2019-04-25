@@ -63,6 +63,7 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
+                                    <outlet property="dataSource" destination="ZjR-FG-U1o" id="TRg-d2-4DP"/>
                                     <outlet property="delegate" destination="ZjR-FG-U1o" id="X9x-pg-PeK"/>
                                 </connections>
                             </tableView>
@@ -77,9 +78,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lambda Gallery" id="bnd-fp-bho"/>
+                    <connections>
+                        <outlet property="tableView" destination="1Sr-XO-zeK" id="MM7-ah-ksQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="ZjR-FG-U1o"/>
+                <customObject id="ZjR-FG-U1o" customClass="PaintingModel" customModule="ArtGallery2" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="20.758928571428569"/>
         </scene>
