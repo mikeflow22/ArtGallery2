@@ -31,6 +31,9 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="ZjR-FG-U1o" id="X9x-pg-PeK"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,11 +46,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lambda Gallery" id="bnd-fp-bho"/>
-                    <connections>
-                        <outlet property="tableView" destination="1Sr-XO-zeK" id="RvY-NR-lkR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="ZjR-FG-U1o"/>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="20.758928571428569"/>
         </scene>

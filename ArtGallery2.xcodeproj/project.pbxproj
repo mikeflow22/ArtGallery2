@@ -16,6 +16,7 @@
 		1B19D01C2271D85C008E05E4 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D01B2271D85C008E05E4 /* Painting.swift */; };
 		1B19D01E2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D01D2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift */; };
 		1B19D0202271D8D2008E05E4 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D01F2271D8D2008E05E4 /* PaintingController.swift */; };
+		1B19D0222271D9A6008E05E4 /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B19D0212271D9A6008E05E4 /* PaintingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1B19D01B2271D85C008E05E4 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		1B19D01D2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintngTableViewCellDelegate.swift; sourceTree = "<group>"; };
 		1B19D01F2271D8D2008E05E4 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
+		1B19D0212271D9A6008E05E4 /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 			children = (
 				1B19D01B2271D85C008E05E4 /* Painting.swift */,
 				1B19D01D2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift */,
+				1B19D0212271D9A6008E05E4 /* PaintingModel.swift */,
 				1B19D01F2271D8D2008E05E4 /* PaintingController.swift */,
 				1B19D0052271D665008E05E4 /* AppDelegate.swift */,
 				1B19D0092271D665008E05E4 /* Main.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				1B19D01E2271D8A1008E05E4 /* PaintngTableViewCellDelegate.swift in Sources */,
 				1B19D0062271D665008E05E4 /* AppDelegate.swift in Sources */,
+				1B19D0222271D9A6008E05E4 /* PaintingModel.swift in Sources */,
 				1B19D0182271D713008E05E4 /* PaintingViewController.swift in Sources */,
 				1B19D0202271D8D2008E05E4 /* PaintingController.swift in Sources */,
 				1B19D01A2271D722008E05E4 /* PaintingTableViewCell.swift in Sources */,
